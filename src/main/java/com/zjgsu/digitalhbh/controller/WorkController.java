@@ -28,4 +28,10 @@ public class WorkController {
         List<Work> data = workService.selectByClassify(classify);
         return new JsonResult<>(200,data);
     }
+
+    @GetMapping("time")
+    public JsonResult<List<Work>> selectByTime(Integer classify,String time){
+        List<Work> data = workService.selectByTime(classify,time);
+        return new JsonResult<>(200,data);
+    }
 }

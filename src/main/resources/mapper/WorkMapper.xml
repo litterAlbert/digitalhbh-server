@@ -11,5 +11,10 @@
         SELECT * FROM t_works WHERE classify = #{classify}
     </select>
 
+    <select id="selectByTime" resultType="Work">
+        SELECT * FROM t_works WHERE classify = #{classify} AND time = #{time}
+    </select>
+
+
 
 </mapper>

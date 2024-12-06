@@ -22,5 +22,13 @@ public interface WorkService {
      */
     List<Work> selectByClassify(Integer classify);
 
+    /**
+     * 获取不同时期书法/绘画作品
+     * @param classify 分类
+     * @param time 时期
+     * @return 返回该时期的作品
+     */
+    List<Work> selectByTime(Integer classify,String time);
+
 
 }

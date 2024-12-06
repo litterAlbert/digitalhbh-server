@@ -27,4 +27,11 @@ public class WorkServiceImpl implements WorkService {
         Work.setNull(workList);
         return workList;
     }
+
+    @Override
+    public List<Work> selectByTime(Integer classify, String time) {
+        List<Work> works = workMapper.selectByTime(classify, time);
+        Work.setNull(works);
+        return works;
+    }
 }
