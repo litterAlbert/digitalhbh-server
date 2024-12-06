@@ -2,6 +2,8 @@ package com.zjgsu.digitalhbh.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.util.List;
+
 public class Work {
     private Integer id;
     private String workname;
@@ -138,5 +140,14 @@ public class Work {
                 ", year=" + year +
                 ", time='" + time + '\'' +
                 '}';
+    }
+
+    public static void setNull(List<Work> workList){
+        for(Work work : workList){
+            work.setId(null);
+            work.setTime(null);
+            work.setClassify(null);
+            work.setYear(null);
+        }
     }
 }

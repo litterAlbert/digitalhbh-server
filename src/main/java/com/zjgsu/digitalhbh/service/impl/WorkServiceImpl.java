@@ -17,24 +17,14 @@ public class WorkServiceImpl implements WorkService {
     @Override
     public List<Work> selectAllWorks() {
         List<Work> workList = workMapper.selectAllWorks();
-        for(Work work : workList){
-            work.setId(null);
-            work.setTime(null);
-            work.setClassify(null);
-            work.setYear(null);
-        }
+        Work.setNull(workList);
         return workList;
     }
 
     @Override
     public List<Work> selectByClassify(Integer classify) {
         List<Work> workList = workMapper.selectByClassify(classify);
-        for(Work work : workList){
-            work.setId(null);
-            work.setTime(null);
-            work.setClassify(null);
-            work.setYear(null);
-        }
+        Work.setNull(workList);
         return workList;
     }
 }
