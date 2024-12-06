@@ -14,4 +14,11 @@ public interface WorkMapper {
      */
     List<Work> selectAllWorks();
 
+    /**
+     * 获取书法/绘画作品
+     * @param classify 分类
+     * @return 返回所有书法/绘画作品
+     */
+    List<Work> selectByClassify(Integer classify);
+
 }

@@ -25,4 +25,16 @@ public class WorkServiceImpl implements WorkService {
         }
         return workList;
     }
+
+    @Override
+    public List<Work> selectByClassify(Integer classify) {
+        List<Work> workList = workMapper.selectByClassify(classify);
+        for(Work work : workList){
+            work.setId(null);
+            work.setTime(null);
+            work.setClassify(null);
+            work.setYear(null);
+        }
+        return workList;
+    }
 }

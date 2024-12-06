@@ -22,4 +22,10 @@ public class WorkController {
         List<Work> data = workService.selectAllWorks();
         return new JsonResult<>(200,data);
     }
+
+    @GetMapping("classify")
+    public JsonResult<List<Work>> selectByClassify(Integer classify){
+        List<Work> data = workService.selectByClassify(classify);
+        return new JsonResult<>(200,data);
+    }
 }

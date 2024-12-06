@@ -4,9 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zjgsu.digitalhbh.mapper.WorkMapper">
     <select id="selectAllWorks" resultType="Work">
-        SELECT
-            *
-        FROM
-            t_works
+        SELECT * FROM t_works
     </select>
+
+    <select id="selectByClassify" resultType="Work">
+        SELECT * FROM t_works WHERE classify = #{classify}
+    </select>
+
+
 </mapper>
