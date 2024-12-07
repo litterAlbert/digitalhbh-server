@@ -10,9 +10,7 @@ public class Work {
     private String author;
     private String era;
     private String work;
-    // 0-绘画，1-书法
     private Integer classify;
-    // @JsonInclude(JsonInclude.Include.NON_NULL)
     private Integer year;
     private String time;
 
