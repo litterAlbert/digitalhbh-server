@@ -3,9 +3,9 @@ package com.zjgsu.digitalhbh.utils;
 import lombok.Data;
 
 @Data
-public class JsonResult<E> {
+public class JsonResult {
     private Integer state;
-    private E data;
+    private Object data;
 
     public JsonResult() {
     }
@@ -14,7 +14,7 @@ public class JsonResult<E> {
         this.state = state;
     }
 
-    public JsonResult(Integer state, E data) {
+    public JsonResult(Integer state, Object data) {
         this.state = state;
         this.data = data;
     }

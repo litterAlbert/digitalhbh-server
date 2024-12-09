@@ -27,4 +27,10 @@ public interface WorkMapper {
     @Select("SELECT * FROM t_works WHERE classify = #{classify} AND time = #{time}")
     List<Work> selectByTime(Integer classify,String time);
 
+    /**
+     * @param workname 作品名
+     * @return 作品的详细信息
+     */
+    @Select("SELECT * FROM t_work_details WHERE workname = #{workname}")
+    Work selectByWorkname(String workname);
 }

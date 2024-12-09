@@ -23,4 +23,10 @@ public interface WorkService {
      * @return 返回相应的作品
      */
     List<Work> selectByTime(Integer classify,String time);
+
+    /**
+     * @param workname 作品名
+     * @return 作品信息
+     */
+    Work selectByWorkname(String workname);
 }

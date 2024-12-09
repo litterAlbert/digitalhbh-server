@@ -1,6 +1,7 @@
 package com.zjgsu.digitalhbh.service.impl;
 
 import com.zjgsu.digitalhbh.entity.Work;
+import com.zjgsu.digitalhbh.entity.WorkDetails;
 import com.zjgsu.digitalhbh.mapper.WorkMapper;
 import com.zjgsu.digitalhbh.service.WorkService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,12 @@ public class WorkServiceImpl implements WorkService {
         List<Work> works = workMapper.selectByTime(classify, time);
         Work.setNull(works);
         return works;
+    }
+
+    @Override
+    public Work selectByWorkname(String workname) {
+        Work work = workMapper.selectByWorkname(workname);
+        WorkDetails.setNull(work);
+        return work;
     }
 }
