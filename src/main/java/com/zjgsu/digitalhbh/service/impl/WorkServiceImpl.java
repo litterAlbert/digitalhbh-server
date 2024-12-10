@@ -37,9 +37,9 @@ public class WorkServiceImpl implements WorkService {
     }
 
     @Override
-    public Work selectByWorkname(String workname) {
-        Work work = workMapper.selectByWorkname(workname);
-        WorkDetails.setNull(work);
-        return work;
+    public WorkDetails selectByWorkname(String workname) {
+        WorkDetails workDetails = workMapper.selectByWorkname(workname);
+        WorkDetails.setNull(workDetails);
+        return workDetails;
     }
 }

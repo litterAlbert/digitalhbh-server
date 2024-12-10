@@ -15,7 +15,7 @@ public class WorkDetails {
     private String collection;
     private String introduction;
 
-    public static void setNull(Work work){
-        work.setId(null);
+    public static void setNull(WorkDetails workDetails){
+        workDetails.setId(null);
     }
 }

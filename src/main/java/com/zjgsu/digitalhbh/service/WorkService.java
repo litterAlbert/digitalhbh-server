@@ -1,6 +1,7 @@
 package com.zjgsu.digitalhbh.service;
 
 import com.zjgsu.digitalhbh.entity.Work;
+import com.zjgsu.digitalhbh.entity.WorkDetails;
 
 import java.util.List;
 
@@ -28,5 +29,5 @@ public interface WorkService {
      * @param workname 作品名
      * @return 作品信息
      */
-    Work selectByWorkname(String workname);
+    WorkDetails selectByWorkname(String workname);
 }

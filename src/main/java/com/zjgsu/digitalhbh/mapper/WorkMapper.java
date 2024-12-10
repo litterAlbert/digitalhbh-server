@@ -1,6 +1,7 @@
 package com.zjgsu.digitalhbh.mapper;
 
 import com.zjgsu.digitalhbh.entity.Work;
+import com.zjgsu.digitalhbh.entity.WorkDetails;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -32,5 +33,5 @@ public interface WorkMapper {
      * @return 作品的详细信息
      */
     @Select("SELECT * FROM t_work_details WHERE workname = #{workname}")
-    Work selectByWorkname(String workname);
+    WorkDetails selectByWorkname(String workname);
 }

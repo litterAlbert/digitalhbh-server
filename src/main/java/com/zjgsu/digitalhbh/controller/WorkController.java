@@ -1,15 +1,19 @@
 package com.zjgsu.digitalhbh.controller;
 
+import com.zjgsu.digitalhbh.entity.JsonResult;
 import com.zjgsu.digitalhbh.entity.Work;
+import com.zjgsu.digitalhbh.entity.WorkDetails;
 import com.zjgsu.digitalhbh.service.WorkService;
-import com.zjgsu.digitalhbh.utils.JsonResult;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@CrossOrigin
 @RequestMapping("api/v1/works")
 @RestController
 public class WorkController {
@@ -37,7 +41,8 @@ public class WorkController {
 
     @GetMapping("details")
     public JsonResult selectByWorkname(String workname){
-        Work data = workService.selectByWorkname(workname);
+        System.err.println(workname);
+        WorkDetails data = workService.selectByWorkname(workname);
         return new JsonResult(200,data);
     }
 }
