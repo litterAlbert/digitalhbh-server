@@ -21,4 +21,16 @@ public class ShipController {
         List<RelationShip> relationShips = shipService.selectAllShips();
         return new JsonResult(200,relationShips);
     }
+
+    @GetMapping("classify")
+    public JsonResult selectByClassify(Integer classify){
+        List<RelationShip> relationShips =shipService.selectByClassify(classify);
+        return new JsonResult(200,relationShips);
+    }
+
+    @GetMapping("time")
+    public JsonResult selectBytime(String time){
+        List<RelationShip> relationShips =shipService.selectByTime(time);
+        return new JsonResult(200,relationShips);
+    }
 }

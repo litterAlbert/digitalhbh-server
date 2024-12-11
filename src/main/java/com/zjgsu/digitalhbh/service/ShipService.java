@@ -17,4 +17,16 @@ public class ShipService {
         RelationShip.setNull(relationShips);
         return relationShips;
     }
+
+    public List<RelationShip> selectByClassify(Integer classify){
+        List<RelationShip> relationShips = shipMapper.selectByClassify(classify);
+        RelationShip.setNull(relationShips);
+        return relationShips;
+    }
+
+    public List<RelationShip> selectByTime(String time){
+        List<RelationShip> relationShips = shipMapper.selectByTime(time);
+        RelationShip.setNull(relationShips);
+        return relationShips;
+    }
 }
