@@ -1,4 +1,4 @@
-package com.zjgsu.digitalhbh.utils;
+package com.zjgsu.digitalhbh.entity;
 
 import lombok.Data;
 

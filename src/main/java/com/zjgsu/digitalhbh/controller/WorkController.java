@@ -23,26 +23,26 @@ public class WorkController {
 
     @GetMapping("all")
     public JsonResult selectAllWorks(){
-        List<Work> data = workService.selectAllWorks();
-        return new JsonResult(200,data);
+        List<Work> works = workService.selectAllWorks();
+        return new JsonResult(200,works);
     }
 
     @GetMapping("classify")
     public JsonResult selectByClassify(Integer classify){
-        List<Work> data = workService.selectByClassify(classify);
-        return new JsonResult(200,data);
+        List<Work> worksClassify = workService.selectByClassify(classify);
+        return new JsonResult(200,worksClassify);
     }
 
     @GetMapping("time")
     public JsonResult selectByTime(Integer classify,String time){
-        List<Work> data = workService.selectByTime(classify,time);
-        return new JsonResult(200,data);
+        List<Work> workTime = workService.selectByTime(classify,time);
+        return new JsonResult(200,workTime);
     }
 
     @GetMapping("details")
     public JsonResult selectByWorkname(String workname){
         System.err.println(workname);
-        WorkDetails data = workService.selectByWorkname(workname);
-        return new JsonResult(200,data);
+        WorkDetails workDetails = workService.selectByWorkname(workname);
+        return new JsonResult(200,workDetails);
     }
 }
