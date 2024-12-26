@@ -19,4 +19,9 @@ public class PersonEvent {
             event.setWork(null);
         }
     }
+
+    public static void setTwoNull(PersonEvent event){
+        event.setYear(null);
+        event.setTitle(null);
+    }
 }

@@ -24,4 +24,11 @@ public class Work {
             work.setYear(null);
         }
     }
+
+    public static void setNull(Work work){
+        work.setId(null);
+        work.setTime(null);
+        work.setClassify(null);
+        work.setYear(null);
+    }
 }

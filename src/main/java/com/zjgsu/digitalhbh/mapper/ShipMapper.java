@@ -20,6 +20,10 @@ public interface ShipMapper {
     @Select("SELECT * FROM t_relationships where classify=#{classify}")
     List<RelationShip> selectByClassify(Integer classify);
 
+    /**
+     * @param time 时期
+     * @return 返回不同时期的关系
+     */
     @Select("SELECT * FROM t_relationships where time=#{time}")
     List<RelationShip> selectByTime(String time);
 }

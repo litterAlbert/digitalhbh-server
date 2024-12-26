@@ -34,4 +34,11 @@ public interface WorkMapper {
      */
     @Select("SELECT * FROM t_work_details WHERE workname = #{workname}")
     WorkDetails selectByWorkname(String workname);
+
+    /**
+     * @param workname 作品名
+     * @return 作品信息
+     */
+    @Select("SELECT * FROM t_works WHERE workname = #{workname}")
+    Work searchByWorkname(String workname);
 }
